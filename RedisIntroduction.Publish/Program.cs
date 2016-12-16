@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Publish
 {
@@ -13,9 +9,9 @@ namespace RedisIntroduction.Publish
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
-                ISubscriber sub = redis.GetSubscriber();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
+                var sub = redis.GetSubscriber();
                 Console.WriteLine("---------Publishing a simple notice on news channel--------");
                 sub.Publish("news", "Trump won");
                 Console.ReadKey();

@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Transactions1
 {
@@ -13,8 +9,8 @@ namespace RedisIntroduction.Transactions1
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------John account value?---------");
                 var res = db.StringGet("account-john");
                 Console.WriteLine("John account is: " + res);
@@ -25,7 +21,7 @@ namespace RedisIntroduction.Transactions1
                 tran.StringIncrementAsync("account-john", 50);
                 Console.WriteLine("About to execute John account incrementint by 50. Press key");
                 Console.ReadKey();
-                string committed = tran.Execute() ? "committed": "rollback";
+                var committed = tran.Execute() ? "committed": "rollback";
                 Console.WriteLine("Transaction was " + committed);
                 Console.ReadKey();
                 Console.WriteLine("---------John account value?---------");

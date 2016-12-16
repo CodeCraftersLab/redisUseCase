@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Transactions2
 {
@@ -13,8 +9,8 @@ namespace RedisIntroduction.Transactions2
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------John account is 50---------");
                 var value = "John";
                 db.StringSet("account-john", 50);

@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RedisIntroduction.Transactions2")]
+[assembly: AssemblyTitle("RedisIntroduction.HyperLogLog")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Amazon.com")]
-[assembly: AssemblyProduct("RedisIntroduction.Transactions2")]
-[assembly: AssemblyCopyright("Copyright © Amazon.com 2016")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("RedisIntroduction.HyperLogLog")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("000d5746-7b04-4fe0-b814-67b425dd7a42")]
+[assembly: Guid("31aee0f6-37d5-4819-afa6-b6a31f922190")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Lists
 {
@@ -13,10 +9,10 @@ namespace RedisIntroduction.Lists
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding countries---------");
-                RedisValue[] countries = new RedisValue[] { "Spain", "France", "Italy", "USA" };
+                var countries = new RedisValue[] { "Spain", "France", "Italy", "USA" };
                 db.ListLeftPush("countries", countries);
                 var rv = db.ListRange("countries", 0, -1);
                 foreach (var val in rv)

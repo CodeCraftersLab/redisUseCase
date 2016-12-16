@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Strings
 {
@@ -13,8 +9,8 @@ namespace RedisIntroduction.Strings
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding and retriving user---------");
                 var value = "John";
                 db.StringSet("user", value);

@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.SortedSets
 {
@@ -13,10 +9,10 @@ namespace RedisIntroduction.SortedSets
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding users and scores---------");
-                SortedSetEntry[] positions = new SortedSetEntry[]
+                var positions = new SortedSetEntry[]
                 {
                     new SortedSetEntry("John Smith",1),
                     new SortedSetEntry("Claire Smith",2),

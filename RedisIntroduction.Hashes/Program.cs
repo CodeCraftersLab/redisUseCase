@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Hashes
 {
@@ -13,17 +9,17 @@ namespace RedisIntroduction.Hashes
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding and retrieving user info---------");
-                HashEntry[] fields = new HashEntry[]
+                var fields = new HashEntry[]
                 {
                     new HashEntry("name","John"),
                     new HashEntry("surname","Smith"),
                     new HashEntry("age",33),
                     new HashEntry("height","178cm"),
                 };
-
+                
                 db.HashSet("user_info", fields);
                 var rv = db.HashGetAll("user_info");
                 foreach (var value in rv)

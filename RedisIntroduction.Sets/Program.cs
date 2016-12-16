@@ -1,9 +1,5 @@
 ﻿using StackExchange.Redis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RedisIntroduction.Sets
 {
@@ -13,10 +9,10 @@ namespace RedisIntroduction.Sets
         {
             try
             {
-                ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost:6379");
-                IDatabase db = redis.GetDatabase();
+                var redis = ConnectionMultiplexer.Connect("95.85.45.233:6379");
+                var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding cities---------");
-                RedisValue[] cities = new RedisValue[] { "Barcelona", "Madrid", "Girona", "Salamanca", "Vic" };
+                var cities = new RedisValue[] { "Barcelona", "Madrid", "Girona", "Salamanca", "Vic" };
                 db.SetAdd("cities", cities);
                 var rv = db.SetMembers("cities");
                 foreach (var val in rv)
@@ -25,7 +21,7 @@ namespace RedisIntroduction.Sets
                 }
                 Console.ReadKey();
                 Console.WriteLine("---------Adding visited cities---------");
-                RedisValue[] visited_cities = new RedisValue[] { "Barcelona" ,"Vic",  "Hospitalet" };
+                var visited_cities = new RedisValue[] { "Barcelona" ,"Vic",  "Hospitalet" };
                 db.SetAdd("visited_cities", visited_cities);
                 rv = db.SetMembers("visited_cities");
                 foreach (var val in rv)

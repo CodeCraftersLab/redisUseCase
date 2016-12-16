@@ -37,6 +37,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PPT", "PPT", "{DECE76A6-EF1
 		PPT\Introduction to Redis.pptx = PPT\Introduction to Redis.pptx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisIntroduction.Geo", "RedisIntroduction.Geo\RedisIntroduction.Geo.csproj", "{18183487-BC91-435D-B3E7-463E712245B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisIntroduction.HyperLogLog", "RedisIntroduction.HyperLogLog\RedisIntroduction.HyperLogLog.csproj", "{31AEE0F6-37D5-4819-AFA6-B6A31F922190}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,14 @@ Global
 		{000D5746-7B04-4FE0-B814-67B425DD7A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{000D5746-7B04-4FE0-B814-67B425DD7A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{000D5746-7B04-4FE0-B814-67B425DD7A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18183487-BC91-435D-B3E7-463E712245B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18183487-BC91-435D-B3E7-463E712245B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18183487-BC91-435D-B3E7-463E712245B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18183487-BC91-435D-B3E7-463E712245B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AEE0F6-37D5-4819-AFA6-B6A31F922190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AEE0F6-37D5-4819-AFA6-B6A31F922190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AEE0F6-37D5-4819-AFA6-B6A31F922190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AEE0F6-37D5-4819-AFA6-B6A31F922190}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
