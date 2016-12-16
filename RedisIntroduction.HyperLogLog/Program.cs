@@ -9,7 +9,7 @@ namespace RedisIntroduction.HyperLogLog
         {
             try
             {
-                var redis = ConnectionMultiplexer.Connect("95.85.45.233:6379,password=sundio1234!");
+                var redis = ConnectionMultiplexer.Connect("localhost:6379");
                 var db = redis.GetDatabase();
                 Console.WriteLine("---------Adding User in hour---------");
 
